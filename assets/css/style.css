@@ -91,7 +91,7 @@ main {
   grid-area: self;
 }
 #self .text {
-  width: auto;
+  width: 100px;
 }
 
 #bkgd {
