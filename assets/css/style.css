@@ -74,6 +74,7 @@ main {
   margin: 2rem auto;
 }
 
+/* hero banner layout as a single row grid */
 .hero-banner {
   margin: 1.5rem;
   width: 96%;
@@ -87,6 +88,7 @@ main {
 
 }
 
+/* self is the grid area for personal photo */
 #self {
   grid-area: self;
 }
@@ -94,6 +96,7 @@ main {
   width: 100px;
 }
 
+/* hero banner background */
 #bkgd {
   grid-area: bkgd;
   text-align: right;
@@ -104,6 +107,7 @@ main {
 
 }
 
+/* main content grid */
 #page-wrapper {
   display: grid;
 
@@ -151,15 +155,15 @@ main {
   align-content: start;
 }
 
+/* shows a border on images when hovering over them */
 .content img:hover {
   border: 5px solid;
   border-color: aqua;
 }
 
+/* sub grid for the work examples */
 #workExamples {
   grid-area: workExamples;
- /* align-items: right;
-  align-content: space-around;*/
   display: grid;
 
   grid-template-columns: 300px 300px;
@@ -172,6 +176,7 @@ main {
   ;
 }
 
+/* filler for blank space within the work examples sub grid */
 #filler {
   grid-area: filler;
   width: 100%;
@@ -262,15 +267,14 @@ footer {
   color: beige;
 }
 
+/* for responsive display sizes */
 @media only screen and (max-width: 790px) {
-  /* Your new CSS selectors go here */
   #navigation {
     display: none;
   }
 
 }
 @media only screen and (max-width: 600px) {
-  /* Your new CSS selectors go here */
   #headline {
     position: static;
     margin: 20px;
