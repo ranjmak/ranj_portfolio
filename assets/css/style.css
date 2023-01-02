@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+  --outer-space: #33393f;
+  --bright-turquoise: #2aefcb;
+  --gin: #e0eae4;
+  --heliotrope: #e866ec;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: rgb(243, 238, 229);
+}
+
+/* Navigation CSS */
+#navBar {
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 75%;
+  align-items: right;
+  justify-content: space-evenly;
+}
+#navigation a {
+  cursor: pointer;
+  text-decoration: none;
+  color: wheat;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  width: 96%;
+  margin: 1.5rem;
+  padding: 1rem;
+  text-align: left;
+  background-color: #33393f;
+  color: wheat;
+}
+
+header h1.page-title {
+  padding: 1rem 1.2rem;
+  font-size: 4.5rem;
+}
+
+main {
+  width: 96%;
+  margin: 2rem auto;
+}
+
+.hero-banner {
+  margin: 1.5rem;
+  width: 96%;
+  padding: 1.0rem;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows:  1fr;
+  grid-template-areas:
+    "self bkgd"
+  ;
+
+}
+
+#self {
+  grid-area: self;
+}
+#self .text {
+  width: auto;
+}
+
+#bkgd {
+  grid-area: bkgd;
+  text-align: right;
+  color: white;
+  background-image: url("../images/week2-bkgnd.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+
+}
+
+#page-wrapper {
+  display: grid;
+
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 30% 65% 5%;
+  grid-template-areas:
+    "about aboutDetails"
+    "work workExamples"
+    "contact contactDetails"
+  ;
+}
+
+#about {
+  grid-area: about;
+  padding: 10px 40px 20px 20px;
+  color: #14406c;
+  align-content: start;
+}
+#about h2 {
+
+  font-weight: 500;
+  font-size: large;
+}
+#work h2 {
+
+  font-weight: 500;
+  font-size: large;
+}
+#contact h2 {
+  font-weight: 500;
+  font-size: large;
+  padding-top: 30px;
+}
+
+#aboutDetails {
+  grid-area: aboutDetails;
+  align-content: start;
+  margin: 0px;
+}
+
+#work {
+  grid-area: work;
+  padding: 10px 40px 20px 20px;
+  color: #14406c;
+  align-content: start;
+}
+
+.content img:hover {
+  border: 5px solid;
+  border-color: aqua;
+}
+
+#workExamples {
+  grid-area: workExamples;
+ /* align-items: right;
+  align-content: space-around;*/
+  display: grid;
+
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "example1 example1"
+    "example2 example3"
+    "example4 example5"
+    "filler filler"
+  ;
+}
+
+#filler {
+  grid-area: filler;
+  width: 100%;
+  height: 200px;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+#example1 {
+  grid-area: example1;
+  width: 100%;
+  height: 200px;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+#example2 {
+  grid-area: example2;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#example3 {
+  grid-area: example3;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#example4 {
+  grid-area: example4;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+#example5 {
+  grid-area: example5;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 300px;
+  color: white;
+}
+
+#example1 .text {
+  width: 600px;
+}
+
+.text p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact {
+  grid-area: contact;
+  padding: 10px 40px 20px 20px;
+  color: #14406c;
+  align-content: start;
+}
+#contactDetails {
+  grid-area: contactDetails;
+  align-content: start;
+  display: flex;
+  padding-top: 50px;
+  align-items: right;
+  justify-content: space-evenly;
+}
+
+
+footer {
+  margin: 1.0rem;
+  width: 96%;
+  height: 30px;
+  margin-top: auto;
+  text-align: center;
+  background-color: #33393f;
+  font-size: x-small;
+  color: beige;
+}
+
+@media only screen and (max-width: 790px) {
+  /* Your new CSS selectors go here */
+  #navigation {
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  /* Your new CSS selectors go here */
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+  #hero-banner {
+    grid-template-areas:
+    "self"
+   ;
+  }
+  #example1 img {
+    width: 300px;
+  }
+  #example1 .text {
+    width: 300px;
+  }
+ 
+  #workExamples {
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "example1"
+      "example2"
+      "example3"
+      "example4"
+      "example5"
+    ;
+  }
+  #contactDetails {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+}
